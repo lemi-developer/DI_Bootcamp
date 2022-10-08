@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#signup-menu {
+  border: 2px solid grey;
+  margin: 40px;
+  padding: 25px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+#login-menu {
+  border: 2px solid grey;
+  margin: 40px;
+  padding: 25px;
+  font-size: large;
+  font-weight: bold;
+}
+
+label {
+  margin: 10px;
+}
+
+input {
+  background-color: aliceblue;
+  padding: 10px;
+  margin: 10px;
+  font-size: larger;
+}

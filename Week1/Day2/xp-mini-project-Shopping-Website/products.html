@@ -1,3 +1,6 @@
+<!-- missing: centralizing, applying opacity and pointer cursor to the icons-menu-->
+<!-- flex-wraper:wrap seemed enough to make the displayed divs show up reponsively-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,15 +13,15 @@
     <title>Shopping Website</title>
   </head>
   <body>
-    <div class="product-row">
+    <div class="product-grid">
       <div class="product-card">
         <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
         <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
         <img src="./assets/image1.png" alt="Womens black top" />
         <div class="icons-menu">
-            <i class="fa-solid fa-eye"></i><br />
-            <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-            <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-eye"></i><br />
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
+          <i class="fa-solid fa-cart-shopping"></i>
         </div>
         <span id="product-title">Women's Black Top</span><br />
         <span class="current-price">$14.40</span>
@@ -47,9 +50,9 @@
         <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
         <img src="./assets/image3.png" alt="Men's White Shirt" />
         <div class="icons-menu">
-            <i class="fa-solid fa-eye"></i><br />
-            <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-            <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-eye"></i><br />
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
+          <i class="fa-solid fa-cart-shopping"></i>
         </div>
         <span id="product-title">Men's White Shirt</span><br />
         <span class="current-price">$14.40</span>
@@ -63,9 +66,9 @@
         <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
         <img src="./assets/image4.png" alt="Women's White Top" />
         <div class="icons-menu">
-            <i class="fa-solid fa-eye"></i><br />
-            <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-            <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-eye"></i><br />
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
+          <i class="fa-solid fa-cart-shopping"></i>
         </div>
         <span id="product-title">Women's White Top</span><br />
         <span class="current-price">$14.40</span>
@@ -73,205 +76,132 @@
         ><br />
         <button class="add-button">Add to Cart</button>
       </div>
+
+      <div class="product-card">
+        <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
+        <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
+        <img src="./assets/image1.png" alt="Womens black top" />
+        <div class="icons-menu">
+          <i class="fa-solid fa-eye"></i><br />
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <span id="product-title">Women's Black Top</span><br />
+        <span class="current-price">$14.40</span>
+        <span class="previous-price"><del>$16.00</del></span
+        ><br />
+        <button class="add-button">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div id="red-sticker"><span id="red-sticker-text">-12%</span></div>
+        <img src="./assets/image2.png" alt="Men's Blue Shirt" />
+        <div class="icons-menu">
+          <i class="fa-solid fa-eye"></i><br />
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <span id="product-title">Men's Blue Shirt</span><br />
+        <span class="current-price">$17.60</span>
+        <span class="previous-price"><del>$20.00</del></span
+        ><br />
+        <button class="add-button">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
+        <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
+        <img src="./assets/image3.png" alt="Men's White Shirt" />
+        <div class="icons-menu">
+          <i class="fa-solid fa-eye"></i><br />
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <span id="product-title">Men's White Shirt</span><br />
+        <span class="current-price">$14.40</span>
+        <span class="previous-price"><del>$16.00</del></span
+        ><br />
+        <button class="add-button">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
+        <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
+        <img src="./assets/image4.png" alt="Women's White Top" />
+        <div class="icons-menu">
+          <i class="fa-solid fa-eye"></i><br />
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <span id="product-title">Women's White Top</span><br />
+        <span class="current-price">$14.40</span>
+        <span class="previous-price"><del>$16.00</del></span
+        ><br />
+        <button class="add-button">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
+        <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
+        <img src="./assets/image1.png" alt="Womens black top" />
+        <div class="icons-menu">
+          <i class="fa-solid fa-eye"></i><br />
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <span id="product-title">Women's Black Top</span><br />
+        <span class="current-price">$14.40</span>
+        <span class="previous-price"><del>$16.00</del></span
+        ><br />
+        <button class="add-button">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div id="red-sticker"><span id="red-sticker-text">-12%</span></div>
+        <img src="./assets/image2.png" alt="Men's Blue Shirt" />
+        <div class="icons-menu">
+          <i class="fa-solid fa-eye"></i><br />
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <span id="product-title">Men's Blue Shirt</span><br />
+        <span class="current-price">$17.60</span>
+        <span class="previous-price"><del>$20.00</del></span
+        ><br />
+        <button class="add-button">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
+        <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
+        <img src="./assets/image3.png" alt="Men's White Shirt" />
+        <div class="icons-menu">
+          <i class="fa-solid fa-eye"></i><br />
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <span id="product-title">Men's White Shirt</span><br />
+        <span class="current-price">$14.40</span>
+        <span class="previous-price"><del>$16.00</del></span
+        ><br />
+        <button class="add-button">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
+        <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
+        <img src="./assets/image4.png" alt="Women's White Top" />
+        <div class="icons-menu">
+          <i class="fa-solid fa-eye"></i><br />
+          <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <span id="product-title">Women's White Top</span><br />
+        <span class="current-price">$14.40</span>
+        <span class="previous-price"><del>$16.00</del></span
+        ><br />
+        <button class="add-button">Add to Cart</button>
       </div>
     </div>
-
-    <div class="product-row">
-        <div class="product-card">
-          <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
-          <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
-          <img src="./assets/image1.png" alt="Womens black top" />
-          <div class="icons-menu">
-              <i class="fa-solid fa-eye"></i><br />
-              <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-              <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <span id="product-title">Women's Black Top</span><br />
-          <span class="current-price">$14.40</span>
-          <span class="previous-price"><del>$16.00</del></span
-          ><br />
-          <button class="add-button">Add to Cart</button>
-        </div>
-  
-        <div class="product-card">
-          <div id="red-sticker"><span id="red-sticker-text">-12%</span></div>
-          <img src="./assets/image2.png" alt="Men's Blue Shirt" />
-          <div class="icons-menu">
-            <i class="fa-solid fa-eye"></i><br />
-            <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <span id="product-title">Men's Blue Shirt</span><br />
-          <span class="current-price">$17.60</span>
-          <span class="previous-price"><del>$20.00</del></span
-          ><br />
-          <button class="add-button">Add to Cart</button>
-        </div>
-  
-        <div class="product-card">
-          <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
-          <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
-          <img src="./assets/image3.png" alt="Men's White Shirt" />
-          <div class="icons-menu">
-              <i class="fa-solid fa-eye"></i><br />
-              <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-              <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <span id="product-title">Men's White Shirt</span><br />
-          <span class="current-price">$14.40</span>
-          <span class="previous-price"><del>$16.00</del></span
-          ><br />
-          <button class="add-button">Add to Cart</button>
-        </div>
-  
-        <div class="product-card">
-          <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
-          <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
-          <img src="./assets/image4.png" alt="Women's White Top" />
-          <div class="icons-menu">
-              <i class="fa-solid fa-eye"></i><br />
-              <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-              <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <span id="product-title">Women's White Top</span><br />
-          <span class="current-price">$14.40</span>
-          <span class="previous-price"><del>$16.00</del></span
-          ><br />
-          <button class="add-button">Add to Cart</button>
-        </div>
-        </div>
-      </div>
-
-      <div class="product-row">
-        <div class="product-card">
-          <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
-          <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
-          <img src="./assets/image1.png" alt="Womens black top" />
-          <div class="icons-menu">
-              <i class="fa-solid fa-eye"></i><br />
-              <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-              <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <span id="product-title">Women's Black Top</span><br />
-          <span class="current-price">$14.40</span>
-          <span class="previous-price"><del>$16.00</del></span
-          ><br />
-          <button class="add-button">Add to Cart</button>
-        </div>
-  
-        <div class="product-card">
-          <div id="red-sticker"><span id="red-sticker-text">-12%</span></div>
-          <img src="./assets/image2.png" alt="Men's Blue Shirt" />
-          <div class="icons-menu">
-            <i class="fa-solid fa-eye"></i><br />
-            <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <span id="product-title">Men's Blue Shirt</span><br />
-          <span class="current-price">$17.60</span>
-          <span class="previous-price"><del>$20.00</del></span
-          ><br />
-          <button class="add-button">Add to Cart</button>
-        </div>
-  
-        <div class="product-card">
-          <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
-          <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
-          <img src="./assets/image3.png" alt="Men's White Shirt" />
-          <div class="icons-menu">
-              <i class="fa-solid fa-eye"></i><br />
-              <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-              <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <span id="product-title">Men's White Shirt</span><br />
-          <span class="current-price">$14.40</span>
-          <span class="previous-price"><del>$16.00</del></span
-          ><br />
-          <button class="add-button">Add to Cart</button>
-        </div>
-  
-        <div class="product-card">
-          <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
-          <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
-          <img src="./assets/image4.png" alt="Women's White Top" />
-          <div class="icons-menu">
-              <i class="fa-solid fa-eye"></i><br />
-              <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-              <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <span id="product-title">Women's White Top</span><br />
-          <span class="current-price">$14.40</span>
-          <span class="previous-price"><del>$16.00</del></span
-          ><br />
-          <button class="add-button">Add to Cart</button>
-        </div>
-        </div>
-      </div>
-
-      <div class="product-row">
-        <div class="product-card">
-          <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
-          <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
-          <img src="./assets/image1.png" alt="Womens black top" />
-          <div class="icons-menu">
-              <i class="fa-solid fa-eye"></i><br />
-              <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-              <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <span id="product-title">Women's Black Top</span><br />
-          <span class="current-price">$14.40</span>
-          <span class="previous-price"><del>$16.00</del></span
-          ><br />
-          <button class="add-button">Add to Cart</button>
-        </div>
-  
-        <div class="product-card">
-          <div id="red-sticker"><span id="red-sticker-text">-12%</span></div>
-          <img src="./assets/image2.png" alt="Men's Blue Shirt" />
-          <div class="icons-menu">
-            <i class="fa-solid fa-eye"></i><br />
-            <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <span id="product-title">Men's Blue Shirt</span><br />
-          <span class="current-price">$17.60</span>
-          <span class="previous-price"><del>$20.00</del></span
-          ><br />
-          <button class="add-button">Add to Cart</button>
-        </div>
-  
-        <div class="product-card">
-          <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
-          <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
-          <img src="./assets/image3.png" alt="Men's White Shirt" />
-          <div class="icons-menu">
-              <i class="fa-solid fa-eye"></i><br />
-              <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-              <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <span id="product-title">Men's White Shirt</span><br />
-          <span class="current-price">$14.40</span>
-          <span class="previous-price"><del>$16.00</del></span
-          ><br />
-          <button class="add-button">Add to Cart</button>
-        </div>
-  
-        <div class="product-card">
-          <div id="green-sticker"><span id="green-sticker-text">NEW</span></div>
-          <div id="red-sticker"><span id="red-sticker-text">-10%</span></div>
-          <img src="./assets/image4.png" alt="Women's White Top" />
-          <div class="icons-menu">
-              <i class="fa-solid fa-eye"></i><br />
-              <i class="fa-sharp fa-solid fa-bag-shopping"></i><br />
-              <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <span id="product-title">Women's White Top</span><br />
-          <span class="current-price">$14.40</span>
-          <span class="previous-price"><del>$16.00</del></span
-          ><br />
-          <button class="add-button">Add to Cart</button>
-        </div>
-        </div>
-      </div>
   </body>
 </html>
