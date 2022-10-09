@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex-direction: row;
+}
+#login {
+  width: 50%;
+  display: block;
+  text-align: center;
+  background-color: rgb(204, 204, 204);
+}
+#register {
+  width: 50%;
+  text-align: center;
+  background-color: purple;
+  color: whitesmoke;
+}
