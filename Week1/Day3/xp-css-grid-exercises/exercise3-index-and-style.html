@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Exercise 3</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="one"></div>
+      <div class="one"></div>
+      <!-- 
+    - it appears that to add content we have to target the last cell-div 
+    - notice align-self is used for vertically centering inside the grid for multi-cell items, and line-height for single-cell ones
+    -->
+      <div
+        class="one"
+        style="
+          color: white;
+          font-size: x-large;
+          font-weight: bolder;
+          text-align: center;
+          align-self: center;
+        "
+      >
+        1
+      </div>
+      <div class="two"></div>
+      <div
+        class="three"
+        style="
+          color: white;
+          font-size: x-large;
+          font-weight: bolder;
+          text-align: center;
+          line-height: 60px;
+        "
+      >
+        3
+      </div>
+      <div
+        class="four"
+        style="
+          color: white;
+          font-size: x-large;
+          font-weight: bolder;
+          text-align: center;
+          line-height: 60px;
+        "
+      >
+        4
+      </div>
+      <div
+        class="two"
+        style="
+          color: white;
+          font-size: x-large;
+          font-weight: bolder;
+          text-align: center;
+          align-self: center;
+        "
+      >
+        2
+      </div>
+      <div class="five"></div>
+      <div
+        class="five"
+        style="
+          color: white;
+          font-size: x-large;
+          font-weight: bolder;
+          text-align: center;
+          align-self: center;
+        "
+      >
+        5
+      </div>
+      <div class="six"></div>
+      <div
+        class="six"
+        style="
+          color: white;
+          font-size: x-large;
+          font-weight: bolder;
+          text-align: center;
+          align-self: center;
+        "
+      >
+        6
+      </div>
+      <div
+        class="seven"
+        style="
+          color: white;
+          font-size: x-large;
+          font-weight: bolder;
+          text-align: center;
+          line-height: 60px;
+        "
+      >
+        7
+      </div>
+      <div class="eight"></div>
+      <div class="eight"></div>
+      <div
+        class="eight"
+        style="
+          color: white;
+          font-size: x-large;
+          font-weight: bolder;
+          text-align: center;
+          align-self: center;
+        "
+      >
+        8
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: 35% 30% 30%;
+    grid-template-rows: 60px 60px 60px 60px 60px;
+    grid-gap: 6px;
+    grid-template-areas:
+      "one one one"
+      "two three four"
+      "two five five"
+      "six six seven"
+      "eight eight eight";
+  }
+
+  .one {
+    background-color: rgb(175, 0, 64);
+    grid-area: one;
+  }
+
+  .two {
+    background-color: rgb(100, 50, 153);
+    grid-area: two;
+  }
+
+  .three {
+    background-color: rgb(87, 61, 230);
+    grid-area: three;
+  }
+
+  .four {
+    background-color: rgb(97, 180, 218);
+    grid-area: four;
+  }
+
+  .five {
+    background-color: rgb(160, 105, 209);
+    grid-area: five;
+  }
+
+  .six {
+    background-color: rgb(175, 0, 64);
+    grid-area: six;
+  }
+
+  .seven {
+    background-color: rgb(100, 50, 153);
+    grid-area: seven;
+  }
+
+  .eight {
+    background-color: rgb(87, 61, 230);
+    grid-area: eight;
+  }
+</style>

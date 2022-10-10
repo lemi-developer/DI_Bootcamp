@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Exercise 2</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header"></div>
+      <div class="header"></div>
+      <div class="header"></div>
+      <div class="hero"></div>
+      <div class="main-content"></div>
+      <div class="main-content"></div>
+      <div class="sidebar"></div>
+      <div class="main-content"></div>
+      <div class="main-content"></div>
+      <div class="sidebar"></div>
+      <div class="extra-content"></div>
+      <div class="extra-content"></div>
+      <div class="related-images"></div>
+      <div class="related-images"></div>
+      <div class="related-posts"></div>
+      <div class="footer"></div>
+      <div class="footer"></div>
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: 38% 28% 28%;
+    grid-template-rows: 40px 90px 60px 70px 60px 35px;
+    grid-gap: 6px;
+    grid-template-areas:
+      "header header header"
+      "hero main-content main-content"
+      "sidebar main-content main-content"
+      "sidebar extra-content extra-content"
+      "related-images related-images related-posts"
+      "footer footer footer";
+  }
+
+  .header {
+    background-color: rgb(56, 139, 233);
+    grid-area: header;
+  }
+
+  .hero {
+    background-color: rgb(177, 104, 255);
+    grid-area: hero;
+  }
+
+  .main-content {
+    background-color: rgb(238, 162, 0);
+    grid-area: main-content;
+  }
+
+  .sidebar {
+    background-color: rgb(141, 151, 0);
+    grid-area: sidebar;
+  }
+
+  .extra-content {
+    background-color: rgb(80, 80, 80);
+    grid-area: extra-content;
+  }
+
+  .related-images {
+    background-color: rgb(35, 137, 72);
+    grid-area: related-images;
+  }
+
+  .related-posts {
+    background-color: rgb(229, 116, 242);
+    grid-area: related-posts;
+  }
+
+  .footer {
+    background-color: rgb(225, 136, 27);
+    grid-area: footer;
+  }
+</style>

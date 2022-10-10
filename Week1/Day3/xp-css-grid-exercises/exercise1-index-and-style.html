@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Exercise 1</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="red top-left-item">1</div>
+      <div class="blue top-right-row"></div>
+      <div class="blue top-right-row"></div>
+      <div class="blue top-right-row">2-4</div>
+      <div class="red middle-left-item">5</div>
+      <div class="blue middle-right-row"></div>
+      <div class="blue middle-right-row"></div>
+      <div class="blue middle-right-row">6-8</div>
+      <div class="red bottom-left-item">9</div>
+      <div class="blue bottom-right-row"></div>
+      <div class="blue bottom-right-row"></div>
+      <div class="blue bottom-right-row">10-12</div>
+      <div class="yellow bottom-row"></div>
+      <div class="yellow bottom-row"></div>
+      <div class="yellow bottom-row"></div>
+      <div class="yellow bottom-row">13-16</div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px; /* size for each, we could use width, height either here, or targeting a specific div */
+    grid-template-rows: 50px 50px 50px 50px;
+    grid-gap: 10px;
+    grid-template-areas:
+      "top-left-item top-right-row top-right-row top-right-row"
+      "middle-left-item middle-right-row middle-right-row middle-right-row"
+      "bottom-left-item bottom-right-row bottom-right-row bottom-right-row"
+      "bottom-row bottom-row bottom-row bottom-row";
+  }
+
+  .grid-container div {
+    border: 1px solid black;
+  }
+
+  .red {
+    background-color: rgb(251, 67, 67);
+  }
+
+  .blue {
+    background-color: rgb(94, 94, 236);
+  }
+
+  .yellow {
+    background-color: rgb(238, 203, 9);
+    grid-area: bottom-row;
+  }
+
+  /* we could lit this bit to be consistent, but its not really necessary
+
+  .top-left-item {
+    grid-area: top-left-item;
+  }
+
+  .middle-left-item {
+    grid-area: middle-left-item;
+  }
+
+  .bottom-left-item {
+    grid-area: bottom-left-item;
+  }
+  */
+
+  .top-right-row {
+    grid-area: top-right-row;
+  }
+
+  .middle-right-row {
+    grid-area: middle-right-row;
+  }
+
+  .bottom-right-row {
+    grid-area: bottom-right-row;
+  }
+</style>
