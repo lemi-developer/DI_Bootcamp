@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>First Landing Page "Shopify"</title>
+  </head>
+  <body>
+    <h1>Shopify powers ambitious entrepreneurs all over the world</h1>
+    <div class="grid-container">
+      <div class="one">
+        <span>500,000</span>
+        <span>Businesses Powered by Shopify</span>
+      </div>
+      <div class="two">
+        <span>1,000,000+</span>
+        <span>Active Users</span>
+      </div>
+      <div class="three">
+        <span>$46B+</span>
+        <span>Sold on Shopify</span>
+      </div>
+      <div class="four">
+        <div>
+          <p>Im seriously happy about running our store on Shopify. Powerful features and easy to set up. Running an online store shouldnt be this much fun</p></div>
+        <div>
+          <span>Tina Roth Eisenberg</span>
+        <span>Designer, Founder of Tattly</span>
+        </div>
+      <div class="five">
+        <div>
+          <p>Shopify has helped me grow my business amazingly. Its been a pleasure because everything has been easier than i ever imagined.</p>
+        </div>
+        <div>
+          <span>Corrine Anestopoulos</span>
+        <span>Designer, Founder of Tattly</span>
+        </div>
+      </div>
+      <div class="six">
+        <div>
+          <p>
+          The best thing about Shopify is that its made me not have to worry about anything that has to do with ecommerce
+        </p>
+      </div>
+        <div>
+          <span>Chris Tsang</span>
+        <span>Designer, Founder of Tattly</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .body {
+    background-image: url(./assets/1575.jpg);
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 90px 300px;
+    grid-gap: 40px;
+    grid-template-areas:
+      "one two three"
+      "four five six";
+  }
+</style>

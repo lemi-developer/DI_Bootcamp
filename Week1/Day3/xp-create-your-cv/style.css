@@ -1,16 +1,17 @@
-.grid-container {
-  width: 300px;
-  height: 300px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  place-items: center;
+body {
+  display: flex;
+}
+.card {
+  width: 28%;
+  height: 700px;
+  background-color: rgb(183, 186, 189);
+  border: 2px solid black;
+  margin: 5px;
 }
 
-.grid-item {
-  background-color: silver;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.main {
+  width: 68%;
+  height: 700px;
+  border: 2px solid black;
+  margin: 5px;
 }

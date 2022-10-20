@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>bootstrap-basics-exercise-1</title>
+  </head>
+
+  <style>
+
+.demo-content{
+        padding: 15px;
+        font-size: 18px;
+        background: #dbdfe5;
+        margin-bottom: 15px;
+}
+    
+.demo-content.bg-alt{
+        background: #abb1b8;
+}
+
+  </style>
+
+<body>
+    <h2 class="text-center my-3">Exercise 1.1</h2>
+    <p class="text-center my-3"> "a container, 2 rows and 3 columns in each row" </p>
+        <div class="container mt-3 cont">
+          <div class="row">
+            <div class="col-md-4">
+                <div class="demo-content">.col-md-4</div>
+            </div>
+            <div class="col-md-4">
+                <div class="demo-content">.col-md-4</div>
+            </div>
+            <div class="col-md-4">
+                <div class="demo-content">.col-md-4</div>
+            </div>
+        </div> <div class="row">
+            <div class="col-md-4">
+                <div class="demo-content">.col-md-4</div>
+            </div>
+            <div class="col-md-4">
+                <div class="demo-content">.col-md-4</div>
+            </div>
+            <div class="col-md-4">
+                <div class="demo-content">.col-md-4</div>
+            </div>
+        </div>
+        </div>
+        <hr>
+
+        <h2 class="text-center my-3">Exercise 1.2</h2>
+    <p class="text-center my-3"> "a container, 2 rows and 2 columns in each row. Use offset to make a space between the 2 columns" </p>
+        <div class="container mt-3 cont">
+          <div class="row">
+            <div class="col-md-5">
+                <div class="demo-content">.col-md-5</div>
+            </div>
+            <div class="col-md-5 offset-md-2">
+                <div class="demo-content">.col-md-5</div>
+            </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="demo-content">.col-md-5</div>
+                </div>
+                <div class="col-md-5 offset-md-2">
+                    <div class="demo-content">.col-md-5</div>
+                </div>
+                </div>
+        </div>
+        <hr>
+
+        <h2 class="text-center my-3">Exercise 1.3</h2>
+    <p class="text-center my-3"> "a structure with 2 rows and 2 columns in each row. What happens if you don't have any container?" </p>
+
+          <div class="row">
+            <div class="col-md-6">
+                <div class="demo-content">.col-md-6</div>
+            </div>
+            <div class="col-md-6">
+                <div class="demo-content">.col-md-6</div>
+            </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="demo-content">.col-md-6</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="demo-content">.col-md-6</div>
+                </div>
+                </div>
+    <p class="text-center my-3"> "as we can see with no container div, the grid structure looses its margins to the sides" </p>
+        
+        <hr>
+
+    <h2 class="text-center my-3">Bootstrap Responsive Layout</h2>
+    <p class="text-center my-3"> Offsetting the Grid Columns : increasing its left margin from its original position by specified number of columns.</p>
+        <div class="container mt-3 cont">
+       
+          <div class="row">
+            <div class="col-md-6 column">
+                <div class="col-md-12 demo-content">.col-md-6</div>
+            </div>
+            <div class="col-md-6">
+                <div class="demo-content bg-alt">.col-md-6</div>
+            </div>
+        </div>
+        
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="demo-content bg-alt">.col-md-8 .offset-md-2</div>
+            </div>
+        </div>
+          
+        <hr>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="demo-content">.col-md-3</div>
+            </div>
+            <div class="col-md-9">
+                <div class="demo-content bg-alt">.col-md-9</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="demo-content bg-alt">.col-md-6 .offset-md-3</div>
+            </div>
+            <div class="col-md-3">
+                <div class="demo-content">.col-md-3</div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="demo-content">.col-md-3</div>
+            </div>
+            <div class="col-md-3">
+                <div class="demo-content bg-alt">.col-md-3</div>
+            </div>
+            <div class="col-md-3">
+                <div class="demo-content">.col-md-3</div>
+            </div>
+            <div class="col-md-3">
+                <div class="demo-content bg-alt">.col-md-3</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 offset-md-3">
+                <div class="demo-content bg-alt">.col-md-3 .offset-md-3</div>
+            </div>
+            <div class="col-md-3 offset-md-3">
+                <div class="demo-content">.col-md-3 .offset-md-3</div>
+            </div>
+        </div>
+    </div>
+    
+    
+  </html>
+</html>

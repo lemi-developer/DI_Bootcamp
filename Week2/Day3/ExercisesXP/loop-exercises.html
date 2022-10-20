@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop-Exercises</title>
+  </head>
+  <body>
+    <script>
+      //attach to JS file
+
+      //Exercise 1
+
+      for (let i = 0; i < 16; i++) {
+        if (i % 2 == !true) {
+          console.log(`${i} is an even number`);
+        } else {
+          console.log(`${i} is an odd number`);
+        }
+      }
+
+      //Exercise 2
+
+      for (let i = 0; i < names.length; i++) {
+        let person = names[i];
+        if (typeof person !== "string") {
+          continue; // breaks one iteration in the loop, and continues with the next iteration
+        } else {
+          let firstLetter = person.substring(0, 1);
+          let fixedName = `${firstLetter.toUpperCase()}${person.substring(1)}`; //we dont really need to check if its uppercase, if it is it will stay,if it isnt, it will become
+          console.log(fixedName);
+        }
+      }
+    </script>
+  </body>
+</html>

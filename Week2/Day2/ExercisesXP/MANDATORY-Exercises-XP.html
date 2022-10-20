@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MANDATORY-Exercises-XP</title>
+  </head>
+  <body>
+    <script>
+      //  Exercise 1: Simple if/else statement
+
+      let x = 5;
+      let y = 2;
+
+      // x and y must always be valid numbers
+
+      let display;
+
+      if (x > y) {
+        display = "x is the bigger number";
+      } else if (y > x) {
+        display = "y is the bigger number";
+      } else {
+        display = "y is equal to x";
+      }
+
+      console.log(display);
+
+      //  Exercise 2: Chihuahua
+
+      // (2.1)
+      let newDog = "Chihuahua";
+
+      // (2.2)
+
+      console.log(newDog.length);
+
+      // (2.3)
+      console.log(newDog.toUpperCase());
+      console.log(newDog.toLowerCase());
+
+      // (2.4)
+
+      if ((newDog = "Chihuahua")) {
+        console.log("I love Chihuahuas, it’s my favorite dog breed");
+      } else {
+        console.log("I dont care, I prefer cats");
+      }
+
+      // (2.4)
+    </script>
+
+    <script>
+      //  Exercise 3: Even or Odd
+
+      console.log(
+        "Welcome to this software that can tell odd from even Numbers!"
+      );
+      let ex = prompt("Give a valid non-decimal Number X: ");
+
+      switch (ex % 2) {
+        case 0:
+          console.log("X is an even number");
+          break;
+        case 1:
+          console.log("X is an odd number");
+          break;
+        default:
+          console.log("Please enter a non-decimal Number");
+      }
+
+      //  Exercise 4: Group Chat
+
+      switch (users.length) {
+        case 0:
+          console.log("no one is online");
+          break;
+        case 1:
+          console.log(`${users[0]} is online`);
+          break;
+        case 2:
+          console.log(`${users[0]}, ${users[1]} are online`);
+          break;
+        case 3:
+          console.log(`${users[0]}, ${users[1]} and 1 more online`);
+          break;
+        default:
+          console.log(
+            `${users[0]}, ${users[1]}, and ${users.length - 2} more are online`
+          );
+      }
+    </script>
+  </body>
+</html>
