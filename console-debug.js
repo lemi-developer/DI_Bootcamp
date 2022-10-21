@@ -346,9 +346,7 @@ const details = {
   is: "Rudolf",
   the: "raindeer",
 };
-
-//  Given the object above and using a for loop, console.log “my name is Rudolf the raindeer”
-let sentenceBlock;
+/*let sentenceBlock;
 for (value in details) {
   sentenceBlock += `${value} ${details[value]} `;
 }
@@ -403,17 +401,44 @@ if (wordBad > wordNot == true) {
   console.log("The movie is bad");
 }
 */
+/*
+let rewardMsg;
+let reward;
 
-let sentence = "The movie is not that bad, I like it";
+function checkQuantityOrder(quantity, clientName) {
+  let reward;
 
-let wordNot = sentence.indexOf("not");
-let wordBad = sentence.indexOf("bad");
+  switch (quantity) {
+    case quantity >= 5 && quantity < 10:
+      reward = "bouquet of flowers!";
+      break;
+    case quantity >= 10 && quantity < 20:
+      reward = "bottle of wine!";
+      break;
+    case quantity >= 20:
+      reward = "trip to Paris!";
+      break;
+    default:
+      rewardMsg = "Thank you for shopping with us!";
+  }
 
-let sentenceStart = sentence.substring(0, wordNot);
-let sentenceEnd = sentence.substring(wordBad + 3); // goes to the end
-
-if (wordBad > wordNot == true) {
-  console.log(`${sentenceStart}good${sentenceEnd}`);
-} else {
-  console.log("The movie is bad");
+  rewardMsg = `Dear ${clientName}, you won a ${reward}`;
+  return rewardMsg;
 }
+
+console.log(checkQuantityOrder(8, "John"));
+console.log(checkQuantityOrder(30, "David"));
+
+*/
+
+const details = {
+  my: "name",
+  is: "Rudolf",
+  the: "raindeer",
+};
+
+let sentenceBlock;
+for (value in details) {
+  sentenceBlock += `${value} ${details[value]} `;
+}
+console.log(sentenceBlock);

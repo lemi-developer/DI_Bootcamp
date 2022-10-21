@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>functions-inclass-exercise</title>
+  </head>
+  <body>
+    <script>
+      /*
+Exercise Function
+You are the manager of the chocolate factory, in order to make your clients happy you will send them a gift depending on their 
+quantity of chocolate box they ordered.
+Create a function named checkQuantityOrder, that takes one parameter, the quantity the user ordered.
+If the client ordered more between 5 and 10 boxes (included) console.log "Dear client, you won a bouquet of flowers"
+If the client ordered more between 10 and 20 boxes (included) console.log "Dear client, you won a bottle of wine"
+If the client ordered more than 20 boxes (not included) console.log "Dear client, you won a trip to Paris"
+Call the function a few times,
+checkQuantityOrder(8);
+checkQuantityOrder(15);
+checkQuantityOrder(30);
+BONUS : add a parameter to the function, the name of the client. If you don't know the name of the client, call him/her "client"
+If the client ordered more between 5 and 10 boxes (included) console.log "Dear <name_client>, you won a bouquet of flowers"
+If the client ordered more between 10 and 20 boxes (included) console.log "Dear <name_client>, you won a bottle of wine"
+If the client ordered more than 20 boxes (not included) console.log "Dear <name_client>, you won a trip to Paris"
+Call the function a few times,
+checkQuantityOrder(8, "John");
+checkQuantityOrder(15);
+checkQuantityOrder(30, "David");
+*/
+
+      let rewardMsg;
+
+      function checkQuantityOrder(quantity, clientName) {
+        let rewardMsg;
+
+        switch (quantity) {
+          case quantity >= 5 && quantity < 10:
+            reward = "bouquet of flowers!";
+            break;
+          case quantity >= 10 && quantity < 20:
+            reward = "bottle of wine!";
+            break;
+          case quantity >= 20:
+            reward = "trip to Paris!";
+            break;
+          default:
+            reward = "Thank you for shopping with us!";
+        }
+
+        rewardMsg = `Dear ${clientName}, you won a {reward}`;
+        return rewardMsg;
+      }
+
+      console.log(rewardMsg);
+
+      checkQuantityOrder(8, "John");
+      checkQuantityOrder(30, "David");
+    </script>
+  </body>
+</html>
