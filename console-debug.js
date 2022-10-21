@@ -361,7 +361,7 @@ console.log(sentenceBlock);
     A group of friends have decided to start a secret society. The society’s name will be the first letter of each of their names sorted in alphabetical order.
     Hint: a string is an array of letters
     Console.log the name of their secret society. The output should be “ABJKPS”*/
-
+/*
 const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
 
 let name;
@@ -403,3 +403,17 @@ if (wordBad > wordNot == true) {
   console.log("The movie is bad");
 }
 */
+
+let sentence = "The movie is not that bad, I like it";
+
+let wordNot = sentence.indexOf("not");
+let wordBad = sentence.indexOf("bad");
+
+let sentenceStart = sentence.substring(0, wordNot);
+let sentenceEnd = sentence.substring(wordBad + 3); // goes to the end
+
+if (wordBad > wordNot == true) {
+  console.log(`${sentenceStart}good${sentenceEnd}`);
+} else {
+  console.log("The movie is bad");
+}

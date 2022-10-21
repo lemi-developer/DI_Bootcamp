@@ -8,11 +8,19 @@
   </head>
   <body>
     <script>
-      let sentence = "The movie is not that bad, i like it";
-      let wordNot = sentence.substring(12, 15);
-      let wordBad = sentence.substring(21, 24);
-      console.log(wordNot);
-      console.log(wordBad);
+      let sentence = "The movie is not that bad, I like it";
+
+      let wordNot = sentence.indexOf("not");
+      let wordBad = sentence.indexOf("bad");
+
+      let sentenceStart = sentence.substring(0, wordNot);
+      let sentenceEnd = sentence.substring(wordBad + 3); // goes to the end
+
+      if (wordBad > wordNot == true) {
+        console.log(`${sentenceStart}good${sentenceEnd}`);
+      } else {
+        console.log("The movie is bad");
+      }
     </script>
   </body>
 </html>
