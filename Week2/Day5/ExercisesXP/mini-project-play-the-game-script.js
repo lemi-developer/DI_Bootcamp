@@ -13,6 +13,8 @@ let confirmToPlay;
 
 let numberGuess;
 
+let numberActual;
+
 function playTheGame() {
   confirm("Would you like to play a game?");
 
@@ -25,5 +27,6 @@ function playTheGame() {
   } else if (numberGuess < 0 || numberGuess > 10) {
     alert("Sorry not a good number, Goodbye");
   } else {
+    numberActual = Math.floor(Math.random() * 10);
   }
 }
