@@ -1,4 +1,4 @@
-/*
+
 //1st retrieve the button
 
 const firstBtn = document.getElementById("btn");
