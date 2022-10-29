@@ -1,18 +1,54 @@
-/* (3.2) Create a function called getBold_items() that takes no parameter. This function
-should collect all the bold items inside the paragraph and assign them to the 
-allBoldItems variable*/
-function getBold_items() {
-  let allBoldItems = document.querySelectorAll("strong");
-  console.log(allBoldItems);
-  return allBoldItems;
+function timeString() {
+  document.getElementById("pressForTime()").innerHTML = Date();
 }
-//(3.3)Create a function called highlight() that changes the color of all the bold text to blue.
-function highlight() {
-  let allBoldItems = document.querySelectorAll("strong");
-  allBoldItems.forEach((boldItem) => (boldItem.style.color = "blue"));
+function pressForTime() {
+  document.getElementById("pressForTime").addEventListener("click", timeString);
 }
-//(3.4)Create a function called return_normal() that changes the color of all the bold text back to black
-function return_normal() {
-  let allBoldItems = document.querySelectorAll("strong");
-  allBoldItems.forEach((boldItem) => (boldItem.style.color = "black"));
+
+//
+function alertOne() {
+  alert("Alert Number One");
+}
+
+function alertTwo() {
+  alert("Alert Number Two");
+}
+
+function displayTwoAlerts() {
+  let x = document.getElementById("displayTwoAlerts");
+  x.addEventListener("click", alertOne);
+  x.addEventListener("click", alertTwo);
+}
+
+//
+function mouseIn() {
+  document.getElementById("mouseRegister()").innerHTML += "Moused over!<br>";
+}
+
+function clicked() {
+  document.getElementById("mouseRegister()").innerHTML += "Clicked!<br>";
+}
+
+function doubleclicked() {
+  document.getElementById("mouseRegister()").innerHTML += "Double Clicked!<br>";
+}
+
+function mouseOut() {
+  document.getElementById("mouseRegister()").innerHTML += "Moused out!<br>";
+}
+
+function mouseRegister() {
+  const x = document.getElementById("mouseRegister");
+  x.addEventListener("mouseover", mouseIn);
+  x.addEventListener("click", clicked);
+  x.addEventListener("dblclick", doubleclicked);
+  x.addEventListener("mouseout", mouseOut);
+}
+
+//
+
+function modifyTitle() {
+  document.getElementById("title").style.color = "blue";
+  document.getElementById("title").style.position = "center";
+  document.getElementById("title").style.fontSize = "35px";
 }

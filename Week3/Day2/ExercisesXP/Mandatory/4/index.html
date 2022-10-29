@@ -11,17 +11,18 @@
       label,
       input {
         display: block;
+        font-weight: bolder;
       }
     </style>
   </head>
   <body>
-    <p>Input radius value and get the volume of a sphere.</p>
-    <form id="MyForm">
-      <label for="radius">Radius</label
-      ><input type="text" name="radius" id="radius" required />
-      <label for="volume">Volume</label
-      ><input type="text" name="volume" id="volume" />
+    <h2>Input radius value and get the volume of a sphere:</h2>
+    <form id="MyForm" onsubmit="submitData(event)">
+      <label for="radius">Radius</label><br />
+      <input type="text" name="radius" id="radius" required /><br />
       <input type="submit" value="Calculate" id="submit" />
     </form>
+    <div id="answer"></div>
   </body>
+  <script type="text/javascript" src="./script.js"></script>
 </html>
