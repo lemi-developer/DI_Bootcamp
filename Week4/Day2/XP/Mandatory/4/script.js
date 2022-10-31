@@ -1,18 +1,9 @@
-const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+/* Exercise 4 : Welcome
+Instructions
 
-let sentence;
-let logAll = colors.forEach((item, index) => {
-  sentence = `#${index + 1} choice is ${item}`;
-  console.log(sentence);
-});
+John has just signed in to your website and you want to welcome him.
 
-//=============================================================================================
-
-let violetCheck = colors.some((color) => color == "Violet");
-
-console.log(violetCheck);
-
-/*
-let violetCheck = colors.some((color) => color == "Violet");
-
-console.log(violetCheck);*/
+    Create a Bootstrap Navbar in your HTML file.
+    In your js file, create a self invoking funtion that takes 1 argument: the name of the user that just signed in.
+    The function should add a div in the nabvar, displaying the name of the user and his profile picture.
+*/
