@@ -1,18 +1,38 @@
-const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+/*
+Exercise 4 : Employees #2
+Instructions
 
-let sentence;
-let logAll = colors.forEach((item, index) => {
-  sentence = `#${index + 1} choice is ${item}`;
-  console.log(sentence);
-});
+Using this object:
+*/
 
-//=============================================================================================
-
-let violetCheck = colors.some((color) => color == "Violet");
-
-console.log(violetCheck);
+const students = [
+  { name: "Ray", course: "Computer Science", isPassed: true },
+  { name: "Liam", course: "Computer Science", isPassed: false },
+  { name: "Jenner", course: "Information Technology", isPassed: true },
+  { name: "Marco", course: "Robotics", isPassed: true },
+  { name: "Kimberly", course: "Artificial Intelligence", isPassed: false },
+  { name: "Jamie", course: "Big Data", isPassed: false },
+];
 
 /*
-let violetCheck = colors.some((color) => color == "Violet");
+    Using the filter() method, create a new array, containing the students that passed the course.
+    Bonus : Chain the filter method with a forEach method, to congratulate the students with their name and 
+    course name (ie. “Good job Jenner, you passed the course in Information Technology”, “Good Job Marco 
+      you passed the course in Robotics” ect…)
+*/
 
-console.log(violetCheck);*/
+let newArray;
+
+for (i = 0; i < students.length; i++) {
+  newArray = students.filter((x) => x.isPassed == true);
+}
+
+let congratulationsArray = [];
+
+newArray.forEach((item, index) =>
+  congratulationsArray.push(
+    `Good job ${students[index].name}, you passed the course in ${students[index].course}`
+  )
+);
+
+console.log(congratulationsArray);

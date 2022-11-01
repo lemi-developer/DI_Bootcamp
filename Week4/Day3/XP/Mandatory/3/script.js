@@ -1,9 +1,7 @@
-let isString = (x) => {
-  console.log(typeof x);
-  console.log(typeof x == "string" ? true : false);
-};
+const epic = ["a", "long", "time", "ago", "in a", "galaxy", "far far", "away"];
 
-isString("hello");
-//true
-isString([1, 2, 4, 0]);
-//false
+let epicString = epic.reduce(
+  (accumulateur, valeurCourante) => accumulateur + ` ` + valeurCourante
+);
+
+console.log(epicString);
