@@ -66,8 +66,8 @@ Part II
     ];
 */
 
-const sortedByYear = inventory.sort(function (a, b) {
-  return a.car_year - b.car_year;
+const sortedByYear = inventory.sort(function (previous, next) {
+  return previous.car_year - next.car_year;
 });
 
 console.log(sortedByYear);
