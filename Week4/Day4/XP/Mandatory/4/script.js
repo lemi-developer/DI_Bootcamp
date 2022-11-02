@@ -1,18 +1,9 @@
-const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+//Analyze the code below. What will be the output? an object
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
 
-let sentence;
-let logAll = colors.forEach((item, index) => {
-  sentence = `#${index + 1} choice is ${item}`;
-  console.log(sentence);
-});
-
-//=============================================================================================
-
-let violetCheck = colors.some((color) => color == "Violet");
-
-console.log(violetCheck);
-
-/*
-let violetCheck = colors.some((color) => color == "Violet");
-
-console.log(violetCheck);*/
+const member = new Person("John");
+console.log(typeof member);

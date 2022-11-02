@@ -1,14 +1,12 @@
-const winBattle = () => true;
+function displayStudentInfo(objUser) {
+  const { first, last } = objUser;
+  return `Your full name is ${first} ${last}`;
+}
 
-let experiencePoints;
+displayStudentInfo({ first: "Elie", last: "Schoppik" });
 
-winBattle() == true ? (experiencePoints = 10) : (experiencePoints = 1);
+/*
+    Using the code above, destructure the parameter inside the function and return a string as the example seen below:
+    output : 'Your full name is Elie Schoppik'
 
-console.log(experiencePoints); // 10
-
-/* 
-    Transform the winBattle() function to an arrow function.
-    Create a variable called experiencePoints.
-    Assign to this variable, a ternary operator. If winBattle() is true, the experiencePoints variable should be equal to 10, else the variable should be equal to 1.
-    Console.log the experiencePoints variable
 */
