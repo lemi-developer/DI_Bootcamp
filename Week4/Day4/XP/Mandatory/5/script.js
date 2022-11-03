@@ -11,11 +11,12 @@ class Labrador extends Dog {
   }
 }
 
-// 2
+// 2  THIS WILL CORRECTLY EXTEND OUR CLASS
 class Labrador extends Dog {
   constructor(name, size) {
-    super(name);
-    this.size = size;
+    // old and new parameters are called
+    super(name); // the original constructor is called  with the "super" label
+    this.size = size; // the additional parameter is established in the extending constructor
   }
 }
 
