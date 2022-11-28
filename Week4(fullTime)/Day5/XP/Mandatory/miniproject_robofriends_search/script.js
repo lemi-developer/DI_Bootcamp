@@ -74,6 +74,7 @@ const robots = [
 ];
 
 robots.forEach((item, index) => {
+  //the object will trigger the displaying of each card through forEach
   let displayCardDiv = document.createElement("div");
   let displayImage = document.createElement("img");
   let displayName = document.createElement("h3");
@@ -92,16 +93,17 @@ robots.forEach((item, index) => {
 
 function filter() {
   let input, stringSearchedByUser, i, robotName;
-  input = document.getElementById("myInput");
-  stringSearchedByUser = input.value.toUpperCase();
-  arrayOfH3 = document.getElementsByTagName("h3");
+  input = document.getElementById("myInput"); //we will capture the input on the searchbar every time it is changed
+  stringSearchedByUser = input.value.toUpperCase(); //the captured value will be converted to all uppercase, as the comparison will be made in all uppercase values
+  arrayOfH3 = document.getElementsByTagName("h3"); //h3 coincides with the sole tag which solely holds solely robotNames, here we have their array
 
   for (i = 0; i < arrayOfH3.length; i++) {
-    h3Element = arrayOfH3[i];
-    robotName = h3Element.textContent || h3Element.innerText;
+    h3Element = arrayOfH3[i]; //here, each element of the array with robot name elements
+    robotName = h3Element.textContent || h3Element.innerText; //here, we isolate the text for the name itself
     if (robotName.toUpperCase().indexOf(stringSearchedByUser) > -1) {
-      // -1 means
-      h3Element.parentElement.style.display = ""; // we refer to the parent element "div" since wed like the entire div to disappear
+      //both the search and robot name are compared in uppercase so as to ignore all difference between upper and lower case
+      // -1 means that the "indexOf" method will look for the index of the searched combination of characters and not find it
+      h3Element.parentElement.style.display = ""; // we refer to the parent element "div" since wed like the entire div of that particular h3 to disappear
     } else {
       h3Element.parentElement.style.display = "none";
     }
