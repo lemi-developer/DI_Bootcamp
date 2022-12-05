@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="my">
+      <input name="one" value="1" />
+      <input name="two" value="2" />
+    </form>
+
+    <form name="yours">
+      <input name="one" value="55555" />
+      <input name="two" value="2" />
+    </form>
+  </body>
+</html>
+
+<script>
+  // get the form
+  let theForm = document.forms.yours;
+  console.log(theForm);
+  // <form name="yours">
+  //   <input name="one" value="55555">
+  //   <input name="two" value="2">
+  // </form>
+
+  // get the element
+  let elem = theForm.elements.one;
+  console.log(elem);
+  // <input name="one" value="55555">
+</script>
