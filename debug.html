@@ -7,26 +7,35 @@
     <title>Document</title>
   </head>
   <body>
-    <form onsubmit="getMethod(event)" id="myform" target="_blank">
-      <input type="text" id="fname" name="q" /><br /><br />
-      <input type="submit" value="Submit" />
-    </form>
+    <button onclick="myFunction()">Try it</button>
   </body>
 
   <script>
-    // 1. create a form with no action and no method
-    // 2. create input type text, name='q' + input type submit
-    // 3. on submit set:
-    //   action to https://www.google.com/search
-    //   method to get
-    //  4. submit the form
+    /*
+    write a function testNum that takes a number as an input and
+    returns a Promise that tests if the value is less than 10
+    value < 10 - resolve with some value reject with value
+    call the function and get results
+    */
 
-    function getMethod(event) {
-      event.preventDefault();
-      const submit = document.getElementById("myform");
-      submit.action = "https://www.google.com/search";
-      submit.method = "get";
-      submit.submit();
-    }
+    let number = 11;
+
+    function testNum(number) {}
+
+    const proms = new Promise((resolve, reject) => {
+      if (number < 10) {
+        resolve("it is smaller than 10");
+      } else {
+        reject("the condition failed");
+      }
+    });
+
+    proms
+      .then((result) => {
+        console.log(result);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   </script>
 </html>

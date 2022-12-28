@@ -1,26 +1,32 @@
-//Analyze the code below. What will be the output?
+// Exercise 1 : Giphy API
+// Instructions
+// With your knewly accumulated knowledge of AJAX lets write some cool code!
 
-const person = {
-  name: "John Doe",
-  age: 25,
-  location: {
-    country: "Canada",
-    city: "Vancouver",
-    coordinates: [49.2827, -123.1207],
-  },
-};
+// You will work with this part of the documention
 
-const {
-  name,
-  location: {
-    country,
-    city,
-    coordinates: [lat, lng],
-  },
-} = person;
+// You will use this Gif URL: https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My
+// Explanation of the Gif URL and the queries
 
-console.log(
-  `I am ${name} from ${city}, ${country}. Latitude(${lat}), Longitude(${lng})`
-);
+// q Request Parameter: Search query term or phrase. Above, the URL is searching for “hilarious” gifs
 
-//The code will work and all the desired object values will be called up
+// rating Request Parameter: Filters results by specified rating. We are searching for Level 1 gifs. Check out the ratings documentation
+
+// api_key Request Paramater : GIPHY API Key. Our API KEY is hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My
+
+// Create a program to retrieve the data from the API URL provided above.
+//Use XMLHttpRequest object to make an AJAX request to the Giphy API and console.log the Javascript Object.
+
+const url =
+  "https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My";
+
+const xhr = new XMLHttpRequest();
+xhr.addEventListener("load", logRequest);
+xhr.open("GET", url);
+xhr.send();
+
+function logRequest(e) {
+  const response = JSON.parse(xhr.response);
+  const first = response.data[0];
+  console.log("response", response);
+  console.log("first:", first);
+}

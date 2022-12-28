@@ -1,20 +1,19 @@
-//creating a promise
+let number = 4;
 
-function isString(arg) {
-  return typeof arg === "string";
-}
+function testNum(number) {}
 
-function makeAllCaps(words) {
-  const prom = new Promise((resolve, reject) => {
-    if (words.every(isString)) {
-      resolve("OK!");
-    } else {
-      reject("Sorry, all values must be strings");
-    }
+const proms = new Promise((resolve, reject) => {
+  if (number < 10) {
+    resolve("it is smaller than 10");
+  } else {
+    reject("the condition failed");
+  }
+});
+
+proms
+  .then((result) => {
+    console.log(result);
+  })
+  .catch(function (error) {
+    console.log(error);
   });
-  prom.then(console.log).catch(console.error);
-}
-
-//resolving a promise
-
-makeAllCaps(["hello", "hi"]);

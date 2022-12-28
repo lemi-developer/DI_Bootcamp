@@ -1,3 +1,5 @@
+//EXERCISE 3
+
 const marioGame = {
   detail: "An amazing game!",
   characters: {

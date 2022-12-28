@@ -4,14 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1</title>
+    <title>Daily Challenge</title>
   </head>
   <body>
-    <form action="" method="get">
+    <form action="" method="get" onsubmit="displayInput(event)" id="myform">
       <input name="first" type="text" value="John" />
       <input name="last" type="text" value="Doe" />
       <input type="submit" type="submit" value="Send" />
     </form>
   </body>
-  <script src="index.js"></script>
+  <script>
+    function displayInput(event) {
+      event.preventDefault();
+
+      const myform = document.forms.myform;
+      const elems = myform.elements; // an array for all the inputs
+      Object.entries(elems).forEach(([key, value]) =>
+        console.log(`${key}: ${value}`)
+      );
+      const inputText = `${elems.first.value} and ${elems.last.value}`;
+      const p = document.createElement("p");
+      p.innerText = inputText;
+      document.body.appendChild(p);
+    }
+
+    /* ANOTHER SOLUTION
+
+document.querySelector("form").addEventListener("submit", handleSubmit);
+
+function handleSubmit(e) {
+  // e for event
+  e.preventDefault(); // to prevent reloading the page
+  const formData = new FormData(document.querySelector("form"));
+  const entries = formData.entries();
+  const data = Object.fromEntries(entries);
+
+  const dataString = JSON.stringify(data);
+  const p = document.createElement("p");
+  p.innerText = dataString;
+  document.body.appendChild(p);
+}
+
+    */
+  </script>
 </html>

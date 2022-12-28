@@ -4,23 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1</title>
+    <title>Document</title>
   </head>
   <body>
-    <form name="loginForm" action="" method="get">
-      <div>
-        <label for="name">Name</label>
-        <input id="name" type="text" value="John" />
-      </div>
+    <!-- EXERCISE 1 -->
+    <!-- Create a form like the one above. The form should contain three inputs: 
+          a small text input asking for a name, 
+          a larger textarea input to write a message,
+          a submit input (“Send”)-->
+    <!-- When you click the Send button, the form will be submitted with a GET method. 
+          (you can use the same HTML file for the action url) -->
 
-      <label for="comments">Comments</label>
-      <div>
-        <textarea id="comments" col="30" rows="10">Hello!</textarea>
-      </div>
-      <input type="submit" value="Send" />
+    <form method="GET" action="">
+      <label for="name">Name</label><br />
+      <input type="text" id="name" name="name" /><br /><br />
+      <label for="comments">Comments</label><br />
+      <textarea id="comments" name="comments" rows="4" columns="50"></textarea
+      ><br /><br />
+      <input type="submit" value="Send GET Method" /><br />
     </form>
-  </body>
-  <script></script>
-</html>
 
-<!-- fpr exercise 1 we use GET for ex 2 we use POST on line 10. Where will the data appear? In the "network" tab from our developer tools -->
+    <!-- Where will the sent data appear? When the action attribute is empty our data is sent 
+          to the same file where our HTML form is. We can visualize the request itself on the 
+          Network menu, on the "headers" submenu.-->
+
+    <!-- EXERCISE 2 -->
+    <!-- Use the same form structure as Exercise 1. -->
+    <!-- When you click the Send button, the form will be submitted with a POST method.
+          (you can use the same HTML file for the action url) -->
+
+    <br />
+    <form method="POST" action="">
+      <label for="name">Name</label><br />
+      <input type="text" id="name" name="name" /><br /><br />
+      <label for="comments">Comments</label><br />
+      <textarea id="comments" name="comments" rows="4" columns="50"></textarea
+      ><br /><br />
+      <input type="submit" value="Send POST Method" /><br />
+    </form>
+
+    <!-- Where will the sent data appear?  Hint : Look at the Network Tab.
+          When the action attribute is empty our data is sent to the same file where our HTML form is. 
+          We can visualize the request itself on the Network menu, on the "headers" submenu.-->
+  </body>
+</html>

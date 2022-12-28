@@ -20,3 +20,10 @@ Some Help
     Do we need to consider whitespace?
     Trim whitespace prior to comparison.
 */
+
+function isAnagram(sentence1, sentence2) {
+  const str1 = sentence1.toLowerCase().split(" ").join("");
+  const str2 = sentence2.toLowerCase().split(" ").join("");
+
+  console.log(str1, str2);
+}

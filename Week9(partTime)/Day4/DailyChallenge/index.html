@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giphy Search</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" id="search" />
+      <label for="search">Search</label>
+      <input type="submit" value="Submit" />
+    </form>
+    <div id="image-container"></div>
+    <script>
+      const url =
+        "https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My";
+
+      const form = document.querySelector("form");
+      const input = document.getElementById("search");
+      const container = document.getElementById("container");
+      form.addEventListener("submit", handleSubmit);
+
+      function handleSubmit(e) {
+        e.preventDefault();
+        const searchItem = input.value;
+      }
+
+      function getGifs(word) {
+        const url = `https://api.giphy.com/v1/gifs/search?q=${word}&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`;
+
+        const xhr = new XMLHttpRequest();
+        xhr.addEventListener("load", console.log);
+        xhr.open("GET", url);
+        xhr.send();
+      }
+
+      function logRequest(e) {
+        const response = JSON.parse(e.target.response);
+        const firstResult = response.data[0];
+        console.log("firstResult:", firstResult);
+        const imageUrl = firstResult.images.fixed_width.webp;
+        const altText = firstResult.title;
+        createImage(imageUrl, altText);
+      }
+
+      function createImage(url, alt) {
+        const div = document.createElement("div");
+
+        const img = document.createElement("img");
+        img.src = url;
+        img.alt = alt;
+        //container.append(img);
+
+        const button = document.createElement("button");
+        button.textContent = "Delete";
+        button.addEventListener("click", removeParentDiv);
+        div.prepend(button);
+        div.prepend(img);
+        container.prepend(div);
+      }
+
+      function removeParentDiv(e) {
+        //console.log("e:", e.target);
+        const parentDiv = e.target.parent;
+        parentDiv.remove();
+      }
+    </script>
+  </body>
+</html>
