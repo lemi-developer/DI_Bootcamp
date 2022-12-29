@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Challenge</title>
+  </head>
+  <body>
+    <form action="" method="get" onsubmit="" name="myform" id="myform">
+      <input name="firstname" type="text" value="John" />
+      <input name="lastname" type="text" value="Doe" />
+      <input type="submit" type="submit" value="Send" />
+    </form>
+  </body>
+  <script>
+    let stringForDisplay = "";
+
+    function jsonStringDisplayer(form) {
+      let arrayOfProperties = [];
+      let arrayOfValues = [];
+      for (i = 0; i < form.length - 1; i++) {
+        arrayOfProperties.push(form[i].name);
+        arrayOfValues.push(form[i].value);
+      }
+      //console.log(arrayOfProperties);
+      //console.log(arrayOfValues);
+      let collectionOfValues = {};
+      arrayOfProperties.forEach((v) => {
+        collectionOfValues[v] = arrayOfValues[arrayOfProperties.indexOf(v)];
+      });
+
+      console.log(JSON.stringify(collectionOfValues));
+      stringForDisplay = JSON.stringify(collectionOfValues);
+
+      const newElement = document.createElement("p");
+      newElement.innerHTML = stringForDisplay;
+      document.body.appendChild(newElement);
+    }
+
+    const form = document.getElementById("myform");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault(); //This will prevent the form from reloading by default
+      console.log(e);
+      //console.log(document.myform.firstname.value);
+      //console.log(typeof document.myform.first.value);
+      //console.log(document.myform.lastname.value);
+      const firstName = document.myform.firstname.value;
+      const lastName = document.myform.lastname.value;
+      //console.log(document.myform[0].value);
+      jsonStringDisplayer(document.myform);
+    });
+
+    // displayInput(event);
+  </script>
+</html>
