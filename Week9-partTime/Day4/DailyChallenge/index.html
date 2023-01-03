@@ -4,68 +4,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Giphy Search</title>
+    <title>Document</title>
   </head>
   <body>
-    <form action="">
+    <form action="" id="myform" onsubmit="retrieveGifUrl()">
       <input type="text" id="search" />
-      <label for="search">Search</label>
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Search" />
+      <input type="reset" value="Delete All" onclick="deleteAll()" />
     </form>
-    <div id="image-container"></div>
-    <script>
-      const url =
-        "https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My";
-
-      const form = document.querySelector("form");
-      const input = document.getElementById("search");
-      const container = document.getElementById("container");
-      form.addEventListener("submit", handleSubmit);
-
-      function handleSubmit(e) {
-        e.preventDefault();
-        const searchItem = input.value;
-      }
-
-      function getGifs(word) {
-        const url = `https://api.giphy.com/v1/gifs/search?q=${word}&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`;
-
-        const xhr = new XMLHttpRequest();
-        xhr.addEventListener("load", console.log);
-        xhr.open("GET", url);
-        xhr.send();
-      }
-
-      function logRequest(e) {
-        const response = JSON.parse(e.target.response);
-        const firstResult = response.data[0];
-        console.log("firstResult:", firstResult);
-        const imageUrl = firstResult.images.fixed_width.webp;
-        const altText = firstResult.title;
-        createImage(imageUrl, altText);
-      }
-
-      function createImage(url, alt) {
-        const div = document.createElement("div");
-
-        const img = document.createElement("img");
-        img.src = url;
-        img.alt = alt;
-        //container.append(img);
-
-        const button = document.createElement("button");
-        button.textContent = "Delete";
-        button.addEventListener("click", removeParentDiv);
-        div.prepend(button);
-        div.prepend(img);
-        container.prepend(div);
-      }
-
-      function removeParentDiv(e) {
-        //console.log("e:", e.target);
-        const parentDiv = e.target.parent;
-        parentDiv.remove();
-      }
-    </script>
+  </br>
+  <div id="bigDiv">
+  </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $("#myform").submit(function (e) {
+      e.preventDefault();
+    });
+
+    function retrieveGifUrl() {
+
+      const input = document.getElementById("search");
+      const stringOfSearch = input.value;
+      
+      //console.log(stringOfSearch);
+
+      const xhr = new XMLHttpRequest();
+
+      xhr.open(
+        "GET",
+        `https://api.giphy.com/v1/gifs/search?q=${stringOfSearch}&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`
+      );
+
+      xhr.responseType = "json";
+
+      xhr.send();
+
+      xhr.onload = () => {
+
+        if (xhr.status != 200) {
+          alert(`Error ${xhr.status}, ${xhr.statusText}`);
+        } else {
+
+          const arrayOfResponse = xhr.response.data;
+          let chosenElement = arrayOfResponse[Math.floor(Math.random() * arrayOfResponse.length)];
+          let chosenElementURL = chosenElement.images.original.url;
+
+          //console.log(chosenElementURL);
+
+          createDiv(chosenElement,chosenElementURL)
+        }
+      };
+    }
+
+function createDiv(chosenElement,chosenElementURL){
+
+    let gifId = chosenElement.id;
+    //console.log(gifId);
+    let divElement = document.createElement("div");
+    divElement.setAttribute(
+      "id", gifId
+    );
+    
+    createGifElement(divElement,chosenElementURL) 
+    createDeleteButton(divElement)
+   
+    const bigDiv = document.getElementById("bigDiv")
+    bigDiv.appendChild(divElement); 
+    }
+
+    function createGifElement(divElement,chosenElementURL){
+
+    let gifElement = document.createElement("img");
+    gifElement.setAttribute(
+      "src", chosenElementURL
+    );
+
+    gifElement.setAttribute("height", "150px");
+    divElement.appendChild(gifElement);
+}   
+
+function createDeleteButton(divElement) {
+    let deleteButton = document.createElement("input");
+    deleteButton.setAttribute("type","submit")
+    deleteButton.setAttribute("value","Delete this GIF")
+    divElement.appendChild(deleteButton); 
+    deleteButton.addEventListener("click", deleteParentDiv)
+}
+
+function deleteParentDiv(e) {
+  //console.log(e.target.parentElement);
+  const parentDiv = e.target.parentElement;
+        parentDiv.remove();         
+}
+
+function deleteAll() {
+  const bigDiv = document.getElementById("bigDiv")
+  bigDiv.remove();
+  const newBigDiv = document.createElement("div")
+  newBigDiv.setAttribute("id","bigDiv")
+  document.body.appendChild(newBigDiv)
+}
+          
+  </script>
 </html>
