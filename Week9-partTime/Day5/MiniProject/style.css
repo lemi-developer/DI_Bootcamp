@@ -29,6 +29,9 @@ body > div {
   height: 200px;
 }
 
+#weatherCard {
+  border: 3px solid rgb(1, 110, 134);
+}
 body > div > img {
   width: 100px;
   height: 60px;

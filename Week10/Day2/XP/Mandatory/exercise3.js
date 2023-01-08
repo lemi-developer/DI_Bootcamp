@@ -1,5 +1,3 @@
-Promise.resolve(3);
-
 const promiseTo3 = Promise.resolve(3);
 
 promiseTo3.then((result) => {

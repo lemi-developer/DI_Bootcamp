@@ -95,7 +95,7 @@ function filter() {
   let input, stringSearchedByUser, i, robotName;
   input = document.getElementById("myInput"); //we will capture the input on the searchbar every time it is changed
   stringSearchedByUser = input.value.toUpperCase(); //the captured value will be converted to all uppercase, as the comparison will be made in all uppercase values
-  arrayOfH3 = document.getElementsByTagName("h3"); //h3 coincides with the sole tag which solely holds solely robotNames, here we have their array
+  arrayOfH3 = document.getElementsByTagName("h3"); //h3 coincides with the sole tag which holds robot Names, here we have their array
 
   for (i = 0; i < arrayOfH3.length; i++) {
     h3Element = arrayOfH3[i]; //here, each element of the array with robot name elements
